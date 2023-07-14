@@ -4,7 +4,9 @@ import Search from "./Search";
 import Moon from "./Moon";
 import Sun from "./Sun";
 import CartIcon from "./CartIcon";
-import Logo from "/Users/yangchengya/AilsaWorkplace/ac/ailsa-ac-shop/src/components/footer_components/Logo.js"
+import Logo from "../footer_components/Logo.js"
+
+
 
 export default function Header() {
   return (
