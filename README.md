@@ -24,4 +24,4 @@ $ npm start
 
 ## Development Tools
 * React: 18.2.0
-* Express v4.18.2
+* sass: 1.63.6
