@@ -1,5 +1,5 @@
 # Ailsa's AC Shop
-![Project Image](https://github.com/ailsayang999/My_First_React_Form/blob/main/public/ailsa-ac-shop-demonstration-picture.png)
+![Project Image](https://github.com/ailsayang999/ailsa-ac-shop/blob/main/public/ailsa-ac-shop-demonstration-picture.png)
 This simple web application can help the shop owner to display the information of the shop.
 
 
