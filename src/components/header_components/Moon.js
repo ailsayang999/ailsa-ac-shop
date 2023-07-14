@@ -13,9 +13,9 @@ const Moon = () => {
       <path
         d="M10.5 1.5C6.75 1.5 2.25 5.25 2.25 11.25C2.25 17.25 6.75 21.75 12.75 21.75C18.75 21.75 22.5 17.25 22.5 13.5C14.25 18.75 5.25 9.75 10.5 1.5Z"
         stroke="#080808"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

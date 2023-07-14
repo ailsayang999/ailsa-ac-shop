@@ -14,7 +14,7 @@ export default function Header() {
       <div className="header-container mx-auto">
         {/* <!-- navbar-toggle --> */}
         <input id="navbar-toggle" className="navbar-toggle" type="checkbox" />
-        <label for="navbar-toggle" className="burger-container">
+        <label htmlFor="navbar-toggle" className="burger-container">
           {/* <svg className="icon-toggle cursor-point">
             <use xlink:href="#svg-icon-toggle"></use>
           </svg> */}

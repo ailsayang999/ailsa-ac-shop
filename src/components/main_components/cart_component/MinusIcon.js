@@ -11,8 +11,8 @@ const MinusIcon = () => {
       className="minus"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M13 27C20.1797 27 26 20.9558 26 13.5C26 6.04416 20.1797 0 13 0C5.8203 0 0 6.04416 0 13.5C0 20.9558 5.8203 27 13 27Z"
         fill="#F0F0F5"
       />

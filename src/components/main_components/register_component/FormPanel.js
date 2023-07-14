@@ -4,55 +4,55 @@ import React from 'react'
 
 const FormPanel = () => {
   return (
-    <div class="form-panel col col-12">
-      <div class="form-container">
+    <div className="form-panel col col-12">
+      <div className="form-container">
         {/* <!--                 address-part --> */}
-        <form class="address-part form-part1" data-phase="address">
-          <h3 class="form-title">寄送地址</h3>
-          <section class="form-body col col-12">
-            <div class="name">
-              <div class="input-group name-group1 name-margin-space">
-                <div class="input-label">稱謂</div>
-                <div class="select-container">
-                  <select class="name-select">
+        <form className="address-part form-part1" data-phase="address">
+          <h3 className="form-title">寄送地址</h3>
+          <section className="form-body col col-12">
+            <div className="name">
+              <div className="input-group name-group1 name-margin-space">
+                <div className="input-label">稱謂</div>
+                <div className="select-container">
+                  <select className="name-select">
                     <option value="mr">先生</option>
                     <option value="ms">女士</option>
                     <option value="mx">不明</option>
                   </select>
                 </div>
               </div>
-              <div class="input-group name-group2">
-                <div class="input-label name-label">姓名</div>
+              <div className="input-group name-group2">
+                <div className="input-label name-label">姓名</div>
                 <input
-                  class="name-input"
+                  className="name-input"
                   type="text"
                   placeholder="請輸入姓名"
                 ></input>
               </div>
             </div>
-            <div class="phone-email">
-              <div class="input-group phone-group phone-margin-space">
-                <div class="input-label">電話</div>
+            <div className="phone-email">
+              <div className="input-group phone-group phone-margin-space">
+                <div className="input-label">電話</div>
                 <input
-                  class="phone-input"
+                  className="phone-input"
                   type="tel"
                   placeholder="請輸入行動電話"
                 ></input>
               </div>
-              <div class="input-group email-group">
-                <div class="input-label email-label">Email</div>
+              <div className="input-group email-group">
+                <div className="input-label email-label">Email</div>
                 <input
-                  class="email-input"
+                  className="email-input"
                   type="email"
                   placeholder="請輸入電子郵件"
                 ></input>
               </div>
             </div>
-            <div class="address">
-              <div class="input-group county-group  county-margin-space">
-                <div class="input-label">縣市</div>
-                <div class="select-container">
-                  <select class="county-select" required>
+            <div className="address">
+              <div className="input-group county-group  county-margin-space">
+                <div className="input-label">縣市</div>
+                <div className="select-container">
+                  <select className="county-select" required>
                     <option value>請選擇縣市</option>
                     <option value="KLU">基隆市</option>
                     <option value="TPH">新北市</option>
@@ -86,10 +86,10 @@ const FormPanel = () => {
                   </select>
                 </div>
               </div>
-              <div class="input-group road-street-group ">
-                <div class="input-label">地址</div>
+              <div className="input-group road-street-group ">
+                <div className="input-label">地址</div>
                 <input
-                  class="road-street-input"
+                  className="road-street-input"
                   type="text"
                   placeholder="請輸入地址"
                 ></input>
@@ -99,85 +99,84 @@ const FormPanel = () => {
         </form>
 
         {/* <!--                 shipping-part --> */}
-        <form class="shipping-part form-part2 d-none" data-phase="shipping">
-          <h3 class="form-title">運送方式</h3>
-          <section class="form-body col col-12">
-            <label class="radio-group col col-12" data-price="0">
+        <form className="shipping-part form-part2 d-none" data-phase="shipping">
+          <h3 className="form-title">運送方式</h3>
+          <section className="form-body col col-12">
+            <label className="radio-group col col-12" data-price="0">
               <input
                 id="shipping-standard"
-                class="shipping-standard"
+                className="shipping-standard"
                 type="radio"
                 name="shipping"
-                checked
               ></input>
-              <div class="radio-info">
-                <div class="description-price">
-                  <div class="text">標準運送</div>
-                  <div class="price">免費</div>
+              <div className="radio-info">
+                <div className="description-price">
+                  <div className="text">標準運送</div>
+                  <div className="price">免費</div>
                 </div>
-                <div class="period col col-12">約 3~7 個工作天</div>
+                <div className="period col col-12">約 3~7 個工作天</div>
               </div>
-              <div class="radio-box-border"></div>
+              <div className="radio-box-border"></div>
             </label>
-            <label class="radio-group col col-12" data-price="500">
+            <label className="radio-group col col-12" data-price="500">
               <input
                 id="shipping-dhl"
                 type="radio"
                 name="shipping"
-                class="shipping-dhl"
+                className="shipping-dhl"
               ></input>
-              <div class="radio-info">
-                <div class="description-price">
-                  <div class="text">DHL 貨運</div>
-                  <div class="price">$500</div>
+              <div className="radio-info">
+                <div className="description-price">
+                  <div className="text">DHL 貨運</div>
+                  <div className="price">$500</div>
                 </div>
-                <div class="period col col-12">48 小時內送達</div>
+                <div className="period col col-12">48 小時內送達</div>
               </div>
-              <div class="radio-box-border"></div>
+              <div className="radio-box-border"></div>
             </label>
           </section>
         </form>
 
         {/* <!--                 credit-card-part --> */}
         <form
-          class="credit-card-part form-part3 d-none"
+          className="credit-card-part form-part3 d-none"
           data-phase="credit-card"
         >
-          <h3 class="form-title">付款資訊</h3>
-          <section class="form-body col col-12">
-            <div class="col col-12">
-              <div class="input-group">
-                <div class="input-label">持卡人姓名</div>
+          <h3 className="form-title">付款資訊</h3>
+          <section className="form-body col col-12">
+            <div className="col col-12">
+              <div className="input-group">
+                <div className="input-label">持卡人姓名</div>
                 <input
-                  class="card-name-input"
+                  className="card-name-input"
                   type="text"
                   placeholder="John Doe"
                 ></input>
               </div>
             </div>
-            <div class="col col-12">
-              <div class="input-group">
-                <div class="input-label">卡號</div>
+            <div className="col col-12">
+              <div className="input-group">
+                <div className="input-label">卡號</div>
                 <input
-                  class="card-number-input"
+                  className="card-number-input"
                   type="text"
                   placeholder="1111 2222 3333 4444"
                 ></input>
               </div>
             </div>
-            <div class="card-detail">
-              <div class="input-group card-number-group card-detail-margin-space">
-                <div class="input-label">有效期限</div>
+            <div className="card-detail">
+              <div className="input-group card-number-group card-detail-margin-space">
+                <div className="input-label">有效期限</div>
                 <input
-                  class="card-number-input"
+                  className="card-number-input"
                   type="text"
                   placeholder="MM/YY"
                 ></input>
               </div>
-              <div class="input-group CVC-CCV-group">
-                <div class="input-label CVC-CCV-label">CVC / CCV</div>
+              <div className="input-group CVC-CCV-group">
+                <div className="input-label CVC-CCV-label">CVC / CCV</div>
                 <input
-                  class="CVC-CCV-input"
+                  className="CVC-CCV-input"
                   type="text"
                   placeholder="123"
                 ></input>
