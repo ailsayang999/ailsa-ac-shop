@@ -1,5 +1,5 @@
 # Ailsa's AC Shop
-![Project Image](https://github.com/ailsayang999/restaurant_list/blob/main/2-3_A1_restaurant_list_AilsaYang.png)
+![Project Image](https://github.com/ailsayang999/My_First_React_Form/blob/main/public/ailsa-ac-shop-demonstration-picture.png)
 This simple web application can help the shop owner to display the information of the shop.
 
 
