@@ -1,0 +1,43 @@
+.progress-control-container {
+  .button-group {
+    padding-top: 24px;
+    border-top: 1px solid rgb(230, 230, 235);
+    .next,
+    .prev {
+      font-weight: 500;
+      line-height: 14px;
+      color: #fff;
+      background-color: #f67599;
+      border-color: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      padding: 10px 40px;
+      width: 174px;
+      border: none;
+      &:hover{
+        margin-bottom: 1px;
+        box-shadow: 0 0 9px 1px #86062a;;
+      }
+    }
+
+    .right-arrow {
+      margin-left: 10px;
+      fill: #fff;
+    }
+  }
+  .button-group1 {
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  .button-group2,
+  .button-group3 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .d-none{
+    display:none;
+  }
+}

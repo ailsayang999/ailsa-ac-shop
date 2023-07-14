@@ -1,0 +1,160 @@
+  .form-panel {
+    .d-none {
+      display: none;
+    }
+    input {
+      border-radius: 5px;
+      border: 1px solid #121212;
+      padding: 10px;
+      width: 400px;
+      &:hover,&:focus{
+        border:1px solid  #f67599;
+        box-shadow: 0 0 5px 1px  #f67599;
+      }
+    }
+    select {
+      color: #121212;
+      border: 1px solid #121212;
+      border-radius: 5px;
+      padding: 9px;
+      width: 100px;
+            &:hover,&:focus{
+        border:1px solid  #f67599;
+        box-shadow: 0 0 5px 1px  #f67599;
+      }
+    }
+    .input-group {
+      margin-bottom: 20px;
+      color: #a7aaaf;
+    }
+
+    .form-body {
+      margin-bottom: 20px;
+      margin-top: 15px;
+
+      .input-label {
+        color: #a7aaaf;
+        font-size: 14px;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      // address-part
+      .name {
+        display: flex;
+        justify-content: flex-start;
+        .name-margin-space {
+          margin-right: 30px;
+        }
+
+        .name-select,
+        .name-input {
+          width: 100%;
+        }
+
+        .name-group1 {
+          width: 50px;
+          flex-grow: 1;
+        }
+        .name-group2 {
+          width: 50px;
+          flex-grow: 3;
+        }
+      }
+      .phone-email {
+        display: flex;
+        justify-content: flex-start;
+        .phone-margin-space {
+          margin-right: 30px;
+        }
+
+        .phone-input,
+        .email-input {
+          width: 100%;
+        }
+
+        .phone-group {
+          width: 50px;
+          flex-grow: 1;
+        }
+        .email-group {
+          width: 50px;
+          flex-grow: 1;
+        }
+      }
+      .address {
+        display: flex;
+        flex-direction: flex-start;
+        .county-margin-space {
+          margin-right: 30px;
+        }
+
+        .county-group {
+          width: 100px;
+          flex-grow: 1;
+        }
+        .county-select,
+        .road-street-input {
+          width: 100%;
+        }
+        .road-street-group {
+          width: 100px;
+          flex-grow: 3;
+        }
+      }
+
+      //shipping-part
+      .radio-group {
+        position: relative;
+        border: 1px solid #a7aaaf;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 11px 20px;
+        margin-top: 20px;
+        .description-price {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .price {
+            position: absolute;
+            right: 40px;
+            font-size: 14px;
+          }
+        }
+        .shipping-standard {
+          width: 20px;
+          height: 20px;
+          margin-right: 20px;
+          align-self: center;
+        }
+        .shipping-dhl {
+          width: 20px;
+          height: 20px;
+          margin-right: 20px;
+          align-self: center;
+        }
+      }
+      //credit-card-part
+      .card-detail {
+        display: flex;
+        justify-content: flex-start;
+        .card-detail-margin-space {
+          margin-right: 30px;
+        }
+        .card-number-input,
+        .CVC-CCV-input {
+          width: 100%;
+        }
+        .card-number-group {
+          width: 100px;
+          flex-grow: 1;
+        }
+        .CVC-CCV-group {
+          width: 100px;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
