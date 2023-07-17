@@ -1,60 +1,85 @@
 import "./_cart.scss";
-import MinusIcon from "./MinusIcon";
-import PlusIcon from "./PlusIcon";
-import Product1 from "./product-1.jpg";
-import Product2 from "./product-2.jpg";
+import { ReactComponent as PlusIcon } from "assets/icons/plusIcon.svg";
+import { ReactComponent as MinusIcon } from "assets/icons/minusIcon.svg";
+import { useState } from "react";
 
+const productsData = [
+  {
+    id: "1",
+    name: "貓咪罐罐",
+    img: "https://picsum.photos/300/300?text=1",
+    price: 100,
+    quantity: 2,
+  },
+  {
+    id: "2",
+    name: "貓咪干干",
+    img: "https://picsum.photos/300/300?text=2",
+    price: 200,
+    quantity: 1,
+  },
+];
 
+//Item component
+function Item({ name, img, price, totalPricePlus, totalPriceMinus }) {
+  const [counter, setCounter] = useState(0);
+
+  function handlePlusClick() {
+    setCounter(counter + 1);
+    totalPricePlus(price);
+  }
+
+  function handleMinusClick() {
+    if (counter > 0) {
+      setCounter(counter - 1);
+      totalPriceMinus(price);
+    }
+  }
+
+  return (
+    <div className="product-container">
+      <img className="img-container" src={img} alt={name}></img>
+      <div className="product-info">
+        <div className="product-name">{name}</div>
+        <div className="product-control-container">
+          <div className="product-control">
+            <MinusIcon onClick={handleMinusClick} />
+
+            <span className="product-count">{counter}</span>
+
+            <PlusIcon onClick={handlePlusClick} />
+          </div>
+        </div>
+        <div className="price">{price * counter}</div>
+      </div>
+    </div>
+  );
+}
+
+//Cart component
 export default function Cart() {
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  function totalPricePlus(price) {
+    setTotalPrice(totalPrice + price);
+  }
+  function totalPriceMinus(price) {
+    setTotalPrice(totalPrice - price);
+  }
+
   return (
     <div className="cart-panel">
       <section className="cart-container col col-lg-5 col-sm-12">
         <h3 className="cart-title">購物籃</h3>
-        {/* <!--             product-list section --> */}
         <section className="product-list col col-12" data-total-price="0">
-          {/* <!--               第一個商品 --> */}
-          <div
-            className="product-container col col-12"
-            data-count="0"
-            data-price="3999"
-          >
-            <img className="img-container" src={Product1} alt="product-1"></img>
-            <div className="product-info">
-              <div className="product-name">破壞補丁修身牛仔褲</div>
-              <div className="product-control-container">
-                <div className="product-control">
-                  {/* <svg className="minus"></svg> */}
-                  <MinusIcon />
-                  <span className="product-count">0</span>
-                  {/* <svg className="plus"></svg> */}
-                  <PlusIcon />
-                </div>
-              </div>
-              <div className="price">$3999</div>
-            </div>
-          </div>
-
-          {/* <!--               第二個商品 --> */}
-          <div
-            className="product-container col col-12"
-            data-count="0"
-            data-price="1299"
-          >
-            <img className="img-container" src={Product2} alt="product-2"></img>
-            <div className="product-info">
-              <div className="product-name">刷色直筒牛仔褲</div>
-              <div className="product-control-container">
-                <div className="product-control">
-                  {/* <svg className="minus"></svg> */}
-                  <MinusIcon  />
-                  <span className="product-count">0</span>
-                  {/* <svg className="plus"></svg> */}
-                  <PlusIcon  />
-                </div>
-              </div>
-              <div className="price">$1299</div>
-            </div>
-          </div>
+          {productsData.map((productData) => (
+            <Item
+              {...productData}
+              totalPricePlus={totalPricePlus}
+              totalPriceMinus={totalPriceMinus}
+              key={productData.id}
+            />
+          ))}
         </section>
 
         {/* <!--             cart-info shipping section --> */}
@@ -65,7 +90,7 @@ export default function Cart() {
         {/* <!--             cart-info total section --> */}
         <section className="cart-info total col col-12">
           <div className="text">小計</div>
-          <div className="price">0</div>
+          <div className="price">{totalPrice}</div>
         </section>
       </section>
     </div>
