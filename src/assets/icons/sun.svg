@@ -1,7 +1,4 @@
-import React from 'react'
 
-const Sun = ({className}) => {
-  return (
     <svg
       width="24"
       height="24"
@@ -56,7 +53,4 @@ const Sun = ({className}) => {
         fillOpacity="0.8"
       />
     </svg>
-  );
-}
 
-export default Sun

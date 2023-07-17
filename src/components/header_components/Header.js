@@ -1,11 +1,11 @@
 import "./_header.scss";
-import IconToggle from "./IconToggle";
-import Search from "./Search";
-import Moon from "./Moon";
-import Sun from "./Sun";
-import CartIcon from "./CartIcon";
-import Logo from "../footer_components/Logo.js"
 
+import { ReactComponent as IconToggle } from "assets/icons/icon-toggle.svg";
+import { ReactComponent as Search } from "assets/icons/search.svg";
+import { ReactComponent as Moon } from "assets/icons/moon.svg";
+import { ReactComponent as Sun } from "assets/icons/sun.svg";
+import { ReactComponent as CartIcon } from "assets/icons/cart-icon.svg";
+import { ReactComponent as Logo } from "assets/icons/logo.svg";
 
 
 export default function Header() {

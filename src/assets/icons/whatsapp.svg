@@ -1,7 +1,4 @@
-import React from "react";
 
-const Whatsapp = () => {
-  return (
     <svg
       width="24"
       height="24"
@@ -16,7 +13,3 @@ const Whatsapp = () => {
         fill="var(--social-icon)"
       />
     </svg>
-  );
-};
-
-export default Whatsapp;

@@ -1,7 +1,4 @@
-import React from 'react'
 
-const CartIcon = () => {
-  return (
     <svg
       width="24"
       height="24"
@@ -16,7 +13,3 @@ const CartIcon = () => {
         fill="#080808"
       />
     </svg>
-  );
-}
-
-export default CartIcon

@@ -1,7 +1,4 @@
-import React from 'react'
 
-const Logo = () => {
-  return (
     <svg
       width="176"
       height="31"
@@ -70,7 +67,3 @@ const Logo = () => {
         fill="#808080"
       />
     </svg>
-  );
-}
-
-export default Logo

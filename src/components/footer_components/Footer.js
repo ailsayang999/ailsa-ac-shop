@@ -1,8 +1,11 @@
-import Logo from "./Logo";
-import Facebook from "./Facebook";
-import Instagram from "./Instagram";
-import Whatsapp from "./Whatsapp";
 import "./_footer.scss";
+
+import { ReactComponent as Logo } from "assets/icons/logo.svg";
+import { ReactComponent as Facebook } from "assets/icons/facebook.svg";
+import { ReactComponent as Instagram } from "assets/icons/instagram.svg";
+import { ReactComponent as Whatsapp } from "assets/icons/whatsapp.svg";
+
+
 
 export default function Footer() {
   return (

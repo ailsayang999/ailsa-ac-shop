@@ -1,7 +1,4 @@
-import React from 'react'
 
-const IconToggle = () => {
-  return (
     <svg
       width="24"
       height="24"
@@ -15,7 +12,3 @@ const IconToggle = () => {
         fill="#2A2A2A"
       />
     </svg>
-  );
-}
-
-export default IconToggle

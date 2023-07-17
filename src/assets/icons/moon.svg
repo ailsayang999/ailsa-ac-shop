@@ -1,7 +1,4 @@
-import React from 'react'
 
-const Moon = () => {
-  return (
     <svg
       width="24"
       height="24"
@@ -18,7 +15,3 @@ const Moon = () => {
         strokeLinejoin="round"
       />
     </svg>
-  );
-}
-
-export default Moon
