@@ -12,9 +12,6 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-logo-container">
-          {/* <svg className="icon-logo">
-            <use xlink:href="#svg-icon-logo"></use>
-          </svg> */}
           <Logo />
         </div>
 
@@ -70,20 +67,12 @@ export default function Footer() {
           <div className="section-content">
             <div className="tel-info">+886 02123-45678</div>
             <div className="social-icon-group">
-              {/* <svg className="social-icon cursor-point">
-                <use xlink:href="#svg-icon-facebook"></use>
-              </svg> */}
               <Facebook />
 
-              {/* <svg className="social-icon cursor-point">
-                <use xlink:href="#svg-icon-instagram"></use>
-              </svg> */}
               <div className="margin-left-spacing">
                 <Instagram />
               </div>
-              {/* <svg className="social-icon cursor-point">
-                <use xlink:href="#svg-icon-whatsapp"></use>
-              </svg> */}
+
               <div className="margin-left-spacing">
                 <Whatsapp />
               </div>

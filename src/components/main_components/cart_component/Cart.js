@@ -66,12 +66,12 @@ export default function Cart() {
           ))}
         </section>
 
-        {/* <!--             cart-info shipping section --> */}
+
         <section className="cart-info shipping col col-12">
           <div className="text">運費</div>
           <div className="price">免費</div>
         </section>
-        {/* <!--             cart-info total section --> */}
+    
         <section className="cart-info total col col-12">
           <div className="text">小計</div>
           <div className="price">{totalPrice}</div>

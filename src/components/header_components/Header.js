@@ -12,16 +12,12 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="header-container mx-auto">
-        {/* <!-- navbar-toggle --> */}
+
         <input id="navbar-toggle" className="navbar-toggle" type="checkbox" />
         <label htmlFor="navbar-toggle" className="burger-container">
-          {/* <svg className="icon-toggle cursor-point">
-            <use xlink:href="#svg-icon-toggle"></use>
-          </svg> */}
           <IconToggle />
         </label>
 
-        {/* <!-- navbar-menu --> */}
         <nav className="navbar-menu">
           <ul className="nav-list site-menu-list mr-auto">
             <li className="nav-item">
@@ -53,37 +49,22 @@ export default function Header() {
 
           <ul className="nav-list site-action-list">
             <li className="nav-item">
-              {/* <svg className="nav-icon cursor-point">
-                <use xlink:href="#svg-icon-search"></use>
-              </svg>                               */}
               <Search />
             </li>
 
             <li className="nav-item">
-              {/* <svg className="nav-icon cursor-point">
-                <use xlink:href="#svg-icon-cart"></use>
-              </svg> */}
               <CartIcon />
             </li>
 
             <li id="theme-toggle" className="nav-item">
-              {/* <svg className="nav-icon cursor-point">
-                <use xlink:href="#svg-icon-moon"></use>
-              </svg>                */}
               <Moon stroke="#080808" />
-              {/* <svg className="nav-icon cursor-point">
-                <use xlink:href="#svg-icon-sun"></use>
-              </svg> */}
               <Sun className="sun-icon" />
             </li>
           </ul>
         </nav>
 
-        {/* <!-- logo --> */}
+    
         <a className="header-logo-container" href="#">
-          {/* <svg className="icon-logo cursor-point">
-            <use xlink:href="#svg-icon-logo"></use>
-          </svg> */}
           <Logo />
         </a>
       </div>
