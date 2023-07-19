@@ -1,4 +1,4 @@
-import "./_header.scss";
+import "./header.scss";
 
 import { ReactComponent as IconToggle } from "assets/icons/icon-toggle.svg";
 import { ReactComponent as Search } from "assets/icons/search.svg";

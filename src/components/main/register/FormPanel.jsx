@@ -1,4 +1,4 @@
-import "./_formPanel.scss";
+import "./formPanel.scss";
 import countyData from "./countyData";
 import React from "react";
 

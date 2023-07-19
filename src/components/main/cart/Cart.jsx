@@ -1,4 +1,4 @@
-import "./_cart.scss";
+import "./cart.scss";
 import productsData from "./productsData";
 import { ReactComponent as PlusIcon } from "assets/icons/plusIcon.svg";
 import { ReactComponent as MinusIcon } from "assets/icons/minusIcon.svg";

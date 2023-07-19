@@ -1,4 +1,4 @@
-import "./_stepperPanel.scss";
+import "./stepperPanel.scss";
 
 import React from 'react'
 

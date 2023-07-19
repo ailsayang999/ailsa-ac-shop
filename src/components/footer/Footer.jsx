@@ -1,4 +1,4 @@
-import "./_footer.scss";
+import "./footer.scss";
 
 import { ReactComponent as Logo } from "assets/icons/logo.svg";
 import { ReactComponent as Facebook } from "assets/icons/facebook.svg";
