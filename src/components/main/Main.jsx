@@ -11,7 +11,7 @@ export default function Main() {
   //調控StepperPanel進度條，影響：StepperPanel，ProgressControl的button
   const [active, setActive] = useState(0);
   //stepper裡面的number
-  const [stepperCircleNum] = useState(3);
+  const stepperCircleNum = 3
 
   // To keep track of user's input information, you can use state in the parent component，FormStep2 要等到之後要計算金額的時候再用useContext來一次處理，totalPrice
   const [formData, setFormData] = useState({
