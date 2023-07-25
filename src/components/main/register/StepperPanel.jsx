@@ -1,32 +1,48 @@
 import "./stepperPanel.scss";
+import { useEffect, useState } from "react";
 
-import React from 'react'
+function Circle({ className, children }) {
+  return <div className={className}>{children}</div>;
+}
 
-const StepperPanel = () => {
+const StepperPanel = ({ active, stepperCircleNum }) => {
+  //stepperCircleNum 的初始值是 3
+  const arr = [];
+  const labelName = ["寄送地址", "運送方式", "付款資訊"];
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    setWidth((100 / (stepperCircleNum - 1)) * active);
+  }, [stepperCircleNum, active]);
+
+  for (let i = 0; i < stepperCircleNum; i++) {
+    arr.push(
+      <Circle className="circle" key={i}>
+        <div
+          className={
+            i <= active
+              ? "circle-number-container active"
+              : "circle-number-container"
+          }
+        >
+          {i + 1}
+        </div>
+        <span
+          className={i <= active ? "label-content active" : "label-content"}
+        >
+          {labelName[i]}
+        </span>
+      </Circle>
+    );
+  }
+
   return (
     <div id="step-control" className="stepper-panel">
       <div className="stepper-container container">
-        <div className="step active">
-          <div className="circle-container circleNum1"></div>
-          <div className="label-container label1">寄送地址</div>
-        </div>
-
-        <div className="line active"></div>
-
-        <div className="step">
-          <div className="circle-container circleNum2"></div>
-          <div className="label-container">運送方式</div>
-        </div>
-
-        <div className="line"></div>
-
-        <div className="step">
-          <div className="circle-container circleNum3"></div>
-          <div className="label-container">付款資訊</div>
-        </div>
+        <div className="progress" style={{ width: width + "%" }}></div>
+        {arr}
       </div>
     </div>
   );
-}
+};
 
-export default StepperPanel
+export default StepperPanel;
