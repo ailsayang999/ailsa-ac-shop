@@ -21,7 +21,6 @@ export default function Register({
         />
         <FormPanel
           step={step}
-          setStep={setStep}
           formData={formData}
           setFormData={setFormData}
         />
