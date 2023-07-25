@@ -1,5 +1,5 @@
 import React from "react";
-import countyData from "./countyData";
+import countyData from "./countyData.js";
 
 function SelectOption() {
   return countyData.map((county) => (
