@@ -1,5 +1,5 @@
 import "./cart.scss";
-import productsData from "./productsData";
+import productsData from "./productsData.js";
 import { ReactComponent as PlusIcon } from "assets/icons/plusIcon.svg";
 import { ReactComponent as MinusIcon } from "assets/icons/minusIcon.svg";
 import { useState } from "react";
@@ -66,12 +66,11 @@ export default function Cart() {
           ))}
         </section>
 
-
         <section className="cart-info shipping col col-12">
           <div className="text">運費</div>
           <div className="price">免費</div>
         </section>
-    
+
         <section className="cart-info total col col-12">
           <div className="text">小計</div>
           <div className="price">{totalPrice}</div>

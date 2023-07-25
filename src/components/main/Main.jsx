@@ -1,6 +1,6 @@
-import Register from "./register/Register.jsx";
-import Cart from "./cart/Cart.jsx";
-import ProgressControl from "./register/ProgressControl.jsx";
+import Register from "./Register/Register.jsx";
+import Cart from "./Cart/Cart.jsx";
+import ProgressControl from "./Register/ProgressControl.jsx";
 
 import { useState } from "react";
 
