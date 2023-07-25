@@ -1,6 +1,6 @@
 import Register from "./register/Register.jsx";
 import Cart from "./cart/Cart.jsx";
-import ProgressControl from "./progress-control/ProgressControl.jsx";
+import ProgressControl from "./register/ProgressControl.jsx";
 
 export default function Main() {
   return (
