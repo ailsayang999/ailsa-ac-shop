@@ -1,6 +1,7 @@
 .stepper-panel {
   height: 120px;
   .stepper-container {
+    overflow: hidden;
     position: relative;
     width: 100%;
     height: 100%;
@@ -22,6 +23,7 @@
   gap: 10px;
 
   .circle-number-container {
+    position: relative;
     background-color: #fff;
     color: #999;
     border-radius: 50%;
@@ -41,20 +43,23 @@
   }
 }
 
-
-.circle.active  .circle-number-container::after{
+.circle.checked.active .circle-number-container::after {
   content: "\2714"; //「勾勾」的 CSS 代號是 \2714：
   color: #fff;
-}
-.circle.active  .circle-number-container{
+  position: absolute;
   background-color: #2a2a2a;
   border: 3px solid #2a2a2a;
 }
 
-.circle.active .label-content{
-  color:#2a2a2a;
+.circle.active .circle-number-container {
+  background-color: #2a2a2a;
+  border: 3px solid #2a2a2a;
+  color: #fff;
 }
 
+.circle.active .label-content {
+  color: #2a2a2a;
+}
 
 .stepper-container::before {
   content: "";
@@ -77,5 +82,4 @@
   height: 4px;
   background-color: black;
   z-index: 2;
-
 }

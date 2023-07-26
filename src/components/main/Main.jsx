@@ -9,9 +9,10 @@ export default function Main() {
   const [step, setStep] = useState(0);
 
   //調控StepperPanel進度條，影響：StepperPanel，ProgressControl的button
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
+  const [checked, setChecked] = useState(0);
   //stepper裡面的number
-  const stepperCircleNum = 3
+  const stepperCircleNum = 5;
 
   // To keep track of user's input information, you can use state in the parent component，FormStep2 要等到之後要計算金額的時候再用useContext來一次處理，totalPrice
   const [formData, setFormData] = useState({
@@ -32,12 +33,11 @@ export default function Main() {
         <div className="left-panel">
           <Register
             step={step}
-            setStep={setStep}
+            active={active}
+            checked={checked}
+            stepperCircleNum={stepperCircleNum}
             formData={formData}
             setFormData={setFormData}
-            active={active}
-            setActive={setActive}
-            stepperCircleNum={stepperCircleNum}
           />
           <ProgressControl
             step={step}
@@ -47,6 +47,8 @@ export default function Main() {
             active={active}
             setActive={setActive}
             stepperCircleNum={stepperCircleNum}
+            checked={checked}
+            setChecked={setChecked}
           />
         </div>
         <div className="right-panel">

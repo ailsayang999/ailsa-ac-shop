@@ -9,6 +9,8 @@ export default function ProgressControl({
   active,
   setActive,
   stepperCircleNum,
+  checked,
+  setChecked,
 }) {
   const buttonDisplay = () => {
     if (step === 0) {
@@ -21,6 +23,9 @@ export default function ProgressControl({
               active >= stepperCircleNum - 1
                 ? setActive(stepperCircleNum - 1)
                 : setActive(active + 1);
+              checked >= stepperCircleNum - 1
+                ? setChecked(stepperCircleNum - 1)
+                : setChecked(checked + 1);
             }}
           >
             下一步
@@ -36,6 +41,7 @@ export default function ProgressControl({
             onClick={() => {
               setStep((currentStep) => currentStep - 1);
               active < 0 ? setActive(0) : setActive(active - 1);
+              checked < 0 ? setChecked(0) : setChecked(checked - 1);
             }}
           >
             <LeftArrow />
@@ -48,6 +54,9 @@ export default function ProgressControl({
               active >= stepperCircleNum - 1
                 ? setActive(stepperCircleNum - 1)
                 : setActive(active + 1);
+              checked >= stepperCircleNum - 1
+                ? setChecked(stepperCircleNum - 1)
+                : setChecked(checked + 1);
             }}
           >
             下一步
@@ -66,6 +75,7 @@ export default function ProgressControl({
             onClick={() => {
               setStep((currentStep) => currentStep - 1);
               active < 0 ? setActive(0) : setActive(active - 1);
+              checked < 0 ? setChecked(0) : setChecked(checked - 1);
             }}
           >
             <LeftArrow />

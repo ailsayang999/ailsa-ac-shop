@@ -4,9 +4,8 @@ import FormPanel from "./FormPanel";
 
 export default function Register({
   step,
-  setStep,
   active,
-  setActive,
+  checked,
   stepperCircleNum,
   formData,
   setFormData,
@@ -18,12 +17,9 @@ export default function Register({
         <StepperPanel
           active={active}
           stepperCircleNum={stepperCircleNum}
+          checked={checked}
         />
-        <FormPanel
-          step={step}
-          formData={formData}
-          setFormData={setFormData}
-        />
+        <FormPanel step={step} formData={formData} setFormData={setFormData} />
       </section>
     </div>
   );
