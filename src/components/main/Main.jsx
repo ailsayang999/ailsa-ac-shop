@@ -43,7 +43,6 @@ export default function Main() {
             step={step}
             setStep={setStep}
             formData={formData}
-            setFormData={setFormData}
             active={active}
             setActive={setActive}
             stepperCircleNum={stepperCircleNum}
