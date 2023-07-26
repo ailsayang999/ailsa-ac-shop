@@ -21,11 +21,11 @@ function Item({
         <div className="product-name">{name}</div>
         <div className="product-control-container">
           <div className="product-control">
-            <MinusIcon onClick={() => handleMinusClick(price, id, quantity)} />
+            <MinusIcon onClick={() => {handleMinusClick(price, id, quantity)}} />
 
             <span className="product-count">{quantity}</span>
 
-            <PlusIcon onClick={() => handlePlusClick(price, id, quantity)} />
+            <PlusIcon onClick={() => {handlePlusClick(price, id, quantity)}} />
           </div>
         </div>
         <div className="price">{price * quantity}</div>
