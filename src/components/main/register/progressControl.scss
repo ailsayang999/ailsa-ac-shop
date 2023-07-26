@@ -2,8 +2,7 @@
   .button-group {
     padding-top: 24px;
     border-top: 1px solid rgb(230, 230, 235);
-    .next,
-    .prev {
+    .next {
       font-weight: 500;
       line-height: 14px;
       color: #fff;
@@ -16,10 +15,38 @@
       padding: 10px 40px;
       width: 174px;
       border: none;
-      &:hover{
+      &:hover {
         margin-bottom: 1px;
-        box-shadow: 0 0 9px 1px #86062a;;
+        box-shadow: 0 0 9px 1px #86062a;
       }
+    }
+    .prev {
+      font-weight: 500;
+      line-height: 14px;
+      color: #2a2a2a;
+      border-color: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      padding: 10px 40px;
+      width: 174px;
+      border: none;
+      &:hover {
+        margin-bottom: 1px;
+        box-shadow: 0 0 9px 1px #86062a;
+        background-color: #f67599;
+        color: #fff;
+        .left-arrow {
+          margin-right: 10px;
+          path{fill:white;}
+        }
+      }
+    }
+
+    .left-arrow {
+      margin-right: 10px;
+      fill: black;
     }
 
     .right-arrow {
@@ -30,14 +57,13 @@
   .button-group1 {
     display: flex;
     justify-content: flex-end;
-    
   }
   .button-group2,
   .button-group3 {
     display: flex;
     justify-content: space-between;
   }
-  .d-none{
-    display:none;
+  .d-none {
+    display: none;
   }
 }
