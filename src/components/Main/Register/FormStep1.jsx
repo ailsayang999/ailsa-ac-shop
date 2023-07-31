@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import countyData from "./countyData.js";
+import FormDataContext from "context/FormDataContext.jsx";
 
 function SelectOption() {
   return countyData.map((county) => (
@@ -9,9 +10,9 @@ function SelectOption() {
   ));
 }
 
-
-
-export default function FormStep1({ formData, setFormData }) {
+export default function FormStep1() {
+  //Context
+  const { formData, setFormData } = useContext(FormDataContext);
   return (
     <form className="address-part form-part1" data-phase="address">
       <h3 className="form-title">寄送地址</h3>

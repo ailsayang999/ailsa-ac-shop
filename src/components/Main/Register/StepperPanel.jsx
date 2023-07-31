@@ -1,7 +1,12 @@
 import "./stepperPanel.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
-const StepperPanel = ({ active, stepperCircleNum, checked }) => {
+import FormDataContext from "context/FormDataContext";
+
+const StepperPanel = () => {
+  //Context
+  const { active, stepperCircleNum, checked } = useContext(FormDataContext);
+
   //stepperCircleNum 的初始值是 5
   //active initial state是1
   //checked initial state 是0

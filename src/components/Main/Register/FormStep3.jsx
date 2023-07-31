@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import FormDataContext from "context/FormDataContext";
 
-export default function FormStep3({ formData, setFormData }) {
+export default function FormStep3() {
+  //Context
+  const { formData, setFormData } = useContext(FormDataContext);
   return (
     <form className="credit-card-part form-part3" data-phase="credit-card">
       <h3 className="form-title">付款資訊</h3>

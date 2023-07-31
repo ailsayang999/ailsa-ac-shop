@@ -1,16 +1,16 @@
 import "./progressControl.scss";
 import { ReactComponent as RightArrow } from "assets/icons/right-arrow.svg";
 import { ReactComponent as LeftArrow } from "assets/icons/left-arrow.svg";
+import { useContext } from "react";
+import FormDataContext from "context/FormDataContext";
+import CartContext from "context/CartContext";
 
 //下一步
-function RightArrowBtn({
-  setStep,
-  active,
-  setActive,
-  stepperCircleNum,
-  checked,
-  setChecked,
-}) {
+function RightArrowBtn() {
+  //Context
+  const { setStep, active, setActive, stepperCircleNum, checked, setChecked } =
+    useContext(FormDataContext);
+
   return (
     <button
       className="next next1"
@@ -31,7 +31,10 @@ function RightArrowBtn({
 }
 
 //上一步
-function LeftArrowBtn({ setStep, active, setActive, checked, setChecked }) {
+function LeftArrowBtn() {
+  //Context
+  const { setStep, active, setActive, checked, setChecked } =
+    useContext(FormDataContext);
   return (
     <button
       className="prev prev1"
@@ -47,50 +50,24 @@ function LeftArrowBtn({ setStep, active, setActive, checked, setChecked }) {
   );
 }
 
-export default function ProgressControl({
-  step,
-  setStep,
-  formData,
-  active,
-  setActive,
-  stepperCircleNum,
-  checked,
-  setChecked,
-}) {
+export default function ProgressControl() {
+  //Context
+  const { step, formData } = useContext(FormDataContext);
+  const { totalPrice } = useContext(CartContext);
+
   const buttonDisplay = () => {
     if (step === 0) {
       return (
         <section className="button-group button-group1" data-phase="address">
-          <RightArrowBtn
-            setStep={setStep}
-            active={active}
-            setActive={setActive}
-            stepperCircleNum={stepperCircleNum}
-            checked={checked}
-            setChecked={setChecked}
-          />
+          <RightArrowBtn />
         </section>
       );
     } else if (step === 1) {
       return (
         <section className="button-group button-group2 " data-phase="shipping">
-          <LeftArrowBtn
-            setStep={setStep}
-            active={active}
-            setActive={setActive}
-            stepperCircleNum={stepperCircleNum}
-            checked={checked}
-            setChecked={setChecked}
-          />
+          <LeftArrowBtn />
 
-          <RightArrowBtn
-            setStep={setStep}
-            active={active}
-            setActive={setActive}
-            stepperCircleNum={stepperCircleNum}
-            checked={checked}
-            setChecked={setChecked}
-          />
+          <RightArrowBtn />
         </section>
       );
     } else if (step === 2) {
@@ -99,14 +76,7 @@ export default function ProgressControl({
           className="button-group button-group3 col col-12 "
           data-phase="credit-card"
         >
-          <LeftArrowBtn
-            setStep={setStep}
-            active={active}
-            setActive={setActive}
-            stepperCircleNum={stepperCircleNum}
-            checked={checked}
-            setChecked={setChecked}
-          />
+          <LeftArrowBtn />
 
           <button
             className="next"
@@ -115,7 +85,14 @@ export default function ProgressControl({
                 "FORM SUBMITTED!! \nCheck out console to see formData object~"
               );
               // 通常會把這筆資料給sending to an API
-              console.log(formData);
+              console.log(
+                `以下為表單資訊：
+                購物車總金額 (小計): ${totalPrice}
+                持卡人姓名: ${formData.cardUserName}
+                卡號: ${formData.cardNumber}
+                有效期限:${formData.cardExpirationDate}
+                CCV: ${formData.CardCVCCCV}`
+              );
             }}
           >
             確認下單
