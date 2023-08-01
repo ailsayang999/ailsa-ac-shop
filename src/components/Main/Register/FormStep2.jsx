@@ -28,6 +28,7 @@ function Radio({
           setFormData({ ...formData, shippingMethod: event.target.value });
           handleShippingMethodChange(shippingFee);
         }}
+
       ></input>
 
       <div className="radio-info">
@@ -56,7 +57,7 @@ const FormStep2 = () => {
       <section className="form-body col col-12">
         <Radio
           shippingFee={0}
-          className={"shipping-dhl"}
+          className={"shipping-standard"}
           id={"shipping-dhl"}
           value="standard"
           defaultChecked={shippingFeeData === 0}
@@ -69,7 +70,7 @@ const FormStep2 = () => {
 
         <Radio
           shippingFee={500}
-          className={"shipping-standard"}
+          className={"shipping-dhl"}
           id={"shipping-standard"}
           value="shipping-dhl"
           defaultChecked={shippingFeeData === 500}
